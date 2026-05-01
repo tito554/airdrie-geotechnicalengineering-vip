@@ -1,0 +1,38 @@
+# Airdrie
+
+> Geotechnical engineering company in United States, providing professional services in soil mechanics, foundation engineering and site investigation.
+
+## Services
+- [Atterberg Limits](https://airdrie.geotechnicalengineering.vip/atterberg-limits/)
+- [Diaphragm Wall Design](https://airdrie.geotechnicalengineering.vip/diaphragm-wall-design/)
+- [Electrical Resistivity Ves](https://airdrie.geotechnicalengineering.vip/electrical-resistivity-ves/)
+- [Foundations](https://airdrie.geotechnicalengineering.vip/foundations/)
+- [Foundations Fill](https://airdrie.geotechnicalengineering.vip/foundations-fill/)
+- [Geomembrane Specification](https://airdrie.geotechnicalengineering.vip/geomembrane-specification/)
+- [Geophysics](https://airdrie.geotechnicalengineering.vip/geophysics/)
+- [Geotextile Specification](https://airdrie.geotechnicalengineering.vip/geotextile-specification/)
+- [Grain Size Analysis](https://airdrie.geotechnicalengineering.vip/grain-size-analysis/)
+- [Ground Improvement](https://airdrie.geotechnicalengineering.vip/ground-improvement/)
+- [Ground Penetrating Radar](https://airdrie.geotechnicalengineering.vip/ground-penetrating-radar/)
+- [Investigation](https://airdrie.geotechnicalengineering.vip/investigation/)
+- [Laboratory](https://airdrie.geotechnicalengineering.vip/laboratory/)
+- [Organic Soil Management](https://airdrie.geotechnicalengineering.vip/organic-soil-management/)
+- [Retaining Wall Design](https://airdrie.geotechnicalengineering.vip/retaining-wall-design/)
+- [Seismic](https://airdrie.geotechnicalengineering.vip/seismic/)
+- [Seismic Amplification Analysis](https://airdrie.geotechnicalengineering.vip/seismic-amplification-analysis/)
+- [Seismic Microzonation](https://airdrie.geotechnicalengineering.vip/seismic-microzonation/)
+- [Slope Failure Analysis](https://airdrie.geotechnicalengineering.vip/slope-failure-analysis/)
+- [Slope Stability Analysis](https://airdrie.geotechnicalengineering.vip/slope-stability-analysis/)
+- [Slopes Walls](https://airdrie.geotechnicalengineering.vip/slopes-walls/)
+- [Soil Classification](https://airdrie.geotechnicalengineering.vip/soil-classification/)
+- [Soil Mechanics Study](https://airdrie.geotechnicalengineering.vip/soil-mechanics-study/)
+- [Standard Modified](https://airdrie.geotechnicalengineering.vip/standard-modified/)
+- [Standard Penetration](https://airdrie.geotechnicalengineering.vip/standard-penetration/)
+- [Unconfined Compression](https://airdrie.geotechnicalengineering.vip/unconfined-compression/)
+
+## Contact
+- Website: https://airdrie.geotechnicalengineering.vip/
+
+## About
+This page provides information about geotechnical engineering services available in United States.
+The company complies with local and international standards including ASTM, ISO and country-specific norms.
