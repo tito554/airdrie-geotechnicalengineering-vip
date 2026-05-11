@@ -26,6 +26,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .servicio:hover { border-color: var(--primary); }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 
@@ -53,12 +58,12 @@ main { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 1p
 .sidebar .cat.open .arrow { transform: rotate(90deg); }
 
 footer { text-align: center; padding: 2rem; font-size: .8rem; color: #94a3b8; background: var(--dark); color: rgba(255,255,255,0.7); }
-    .content-area { flex-direction: column; }
+    
 .sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .cat-sub-wrap a{display:block;padding:.5rem 1.1rem .5rem 1.8rem;color:inherit;text-decoration:none;font-size:.92rem;opacity:.85;transition:opacity .15s,background .15s}
-    .container { padding: 1rem; }
+    
 summary { padding: 1rem 1.25rem; cursor: pointer; font-weight: 500; color: var(--dark); background: #f8fafc; list-style: none; }
 
 table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .9rem; }
@@ -106,7 +111,7 @@ summary::-webkit-details-marker { display: none; }
 summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 
 .content-area { display: flex; gap: 1.5rem; align-items: flex-start; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 summary:hover { background: rgba(0,0,0,0.02); }
 th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -134,9 +139,11 @@ body { font-family: var(--font-b); color: var(--text); background: var(--bg); li
 }
 .cat-toggle:hover{background:rgba(255,255,255,.1)}
 .cat-name:hover{text-decoration:underline;text-underline-offset:3px}
-    main { padding: 1.5rem; }
+    
 .sidebar .cat:hover { background: rgba(255,255,255,0.08); }
-tr:nth-child(even) { background: #f8fafc; }</style>
+tr:nth-child(even) { background: #f8fafc; }
+
+</style>
 <style>
 @media(min-width:901px){
   .content-area{display:flex!important;gap:1.5rem!important;align-items:flex-start!important}
@@ -148,7 +155,9 @@ tr:nth-child(even) { background: #f8fafc; }</style>
   .navbar .nav{display:flex!important;flex-wrap:nowrap!important;gap:1.2rem!important;align-items:center!important;overflow:visible!important;justify-content:space-between!important}
   .sidebar nav,.sidebar .nav{display:block!important}
   body{background:#FAFAFA!important;color:#18181B!important}
-img{max-width:100%!important;height:auto!important}</style></head>
+img{max-width:100%!important;height:auto!important}
+}
+</style></head>
 <body>
 
 <header>
@@ -192,6 +201,8 @@ img{max-width:100%!important;height:auto!important}</style></head>
 
             <section>
                 <h2>Risks and considerations in Airdrie</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>A three-storey townhouse project in Airdrie's Bayview district once encountered a clay layer that appeared competent during visual inspection but failed at only 85 kPa in UCS testing. The structural engineer had assumed 150 kPa for the footing design. Because we caught the discrepancy before concrete was poured, the team redesigned the spread footings and added a granular base course, avoiding a costly settlement issue two years later. That scenario repeats more often than most developers expect, especially in areas where the glacial till has been desiccated near the surface, creating a crust that masks weaker underlying clay.</p>
             </section>
 
@@ -216,6 +227,8 @@ img{max-width:100%!important;height:auto!important}</style></head>
 
             <section>
                 <h2>Quick answers</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <details><summary>How does the unconfined compression test differ from a triaxial test for Airdrie soils?</summary><p>UCS applies no confining pressure, so it measures the undrained strength of cohesive soil in its natural state. Triaxial tests can simulate the confining stress at depth, which is more representative for deep foundations. For shallow footings in Airdrie's stiff clay till, UCS often provides sufficient accuracy at lower cost.</p></details><details><summary>What sample quality is required for a valid UCS in Airdrie?</summary><p>Only undisturbed tube samples (Shelby or piston) are acceptable. Samples must be extruded, trimmed, and tested within 72 hours of extraction to avoid moisture loss. Disturbed or remoulded specimens will produce unreliable qu values.</p></details><details><summary>Can UCS alone determine bearing capacity for a house foundation in Airdrie?</summary><p>UCS gives the undrained shear strength (su = qu/2), which is a direct input to bearing capacity formulas. However, we recommend combining it with a <a href="../soil-classification/" data-interlink="1">soil classification</a> and at least one Proctor compaction test for fill areas. Many Airdrie sites require both UCS and SPT to confirm stratification.</p></details><details><summary>What is the typical cost range for a UCS test in Airdrie?</summary><p>The typical cost for a standard unconfined compression test in Airdrie ranges from CA$400 to CA$630 per sample, depending on the number of specimens and whether moisture-density correlation is included. Volume discounts apply for multi-sample projects.</p></details>
             </section>
 

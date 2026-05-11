@@ -26,6 +26,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .servicio:hover { border-color: var(--primary); }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 
@@ -53,12 +58,12 @@ main { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 1p
 .sidebar .cat.open .arrow { transform: rotate(90deg); }
 
 footer { text-align: center; padding: 2rem; font-size: .8rem; color: #94a3b8; background: var(--dark); color: rgba(255,255,255,0.7); }
-    .content-area { flex-direction: column; }
+    
 .sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .cat-sub-wrap a{display:block;padding:.5rem 1.1rem .5rem 1.8rem;color:inherit;text-decoration:none;font-size:.92rem;opacity:.85;transition:opacity .15s,background .15s}
-    .container { padding: 1rem; }
+    
 summary { padding: 1rem 1.25rem; cursor: pointer; font-weight: 500; color: var(--dark); background: #f8fafc; list-style: none; }
 
 table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .9rem; }
@@ -106,7 +111,7 @@ summary::-webkit-details-marker { display: none; }
 summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 
 .content-area { display: flex; gap: 1.5rem; align-items: flex-start; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 summary:hover { background: rgba(0,0,0,0.02); }
 th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -134,9 +139,11 @@ body { font-family: var(--font-b); color: var(--text); background: var(--bg); li
 }
 .cat-toggle:hover{background:rgba(255,255,255,.1)}
 .cat-name:hover{text-decoration:underline;text-underline-offset:3px}
-    main { padding: 1.5rem; }
+    
 .sidebar .cat:hover { background: rgba(255,255,255,0.08); }
-tr:nth-child(even) { background: #f8fafc; }</style>
+tr:nth-child(even) { background: #f8fafc; }
+
+</style>
 <style>
 @media(min-width:901px){
   .content-area{display:flex!important;gap:1.5rem!important;align-items:flex-start!important}
@@ -148,7 +155,9 @@ tr:nth-child(even) { background: #f8fafc; }</style>
   .navbar .nav{display:flex!important;flex-wrap:nowrap!important;gap:1.2rem!important;align-items:center!important;overflow:visible!important;justify-content:space-between!important}
   .sidebar nav,.sidebar .nav{display:block!important}
   body{background:#FAFAFA!important;color:#18181B!important}
-img{max-width:100%!important;height:auto!important}</style></head>
+img{max-width:100%!important;height:auto!important}
+}
+</style></head>
 <body>
 
 <header>
@@ -192,6 +201,8 @@ img{max-width:100%!important;height:auto!important}</style></head>
 
             <section>
                 <h2>Risks and considerations in Airdrie</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>NBCC 2019 and CSA A23.3-19 require that separation layers prevent pumping and loss of fines. In Airdrie, the high-plasticity clay till (CH) can clog a geotextile with low AOS. The risk is real: blocked fabrics reduce drainage, increase pore pressure, and lead to shear failure under roads or behind walls. We always cross-check the geotextile specification against the soil's D₈₅ and the hydraulic gradient. Ignoring this step in Airdrie's glaciolacustrine soils can cause differential settlement within two winters.</p>
             </section>
 
@@ -216,6 +227,8 @@ img{max-width:100%!important;height:auto!important}</style></head>
 
             <section>
                 <h2>Quick answers</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <details><summary>What ASTM standards apply to geotextile specification in Airdrie?</summary><p>We use ASTM D4595 for wide-width tensile, ASTM D4632 for grab strength, ASTM D4491 for permittivity, and ASTM D4751 for AOS. For installation we follow ASTM D4759. These align with NBCC 2019 separation requirements.</p></details><details><summary>How much does a geotextile specification service cost in Airdrie?</summary><p>Our typical cost ranges from CA$610 to CA$1,550 depending on project complexity, number of fabric types, and whether field sampling is included. Contact us for a quote.</p></details><details><summary>What is the difference between woven and non-woven geotextile for Airdrie subgrades?</summary><p>Woven fabrics have high tensile strength (40–100 kN/m) and work well for reinforcement under roads. Non-woven fabrics offer higher permittivity (0.5–1.5 s⁻¹) and are better for drainage and separation in clay till. We select based on CBR and grain size.</p></details><details><summary>Can I reuse the same geotextile spec from a project in Calgary?</summary><p>Not directly. Airdrie's clay till has higher plasticity (CH) and lower permeability than many Calgary sites. The AOS and permittivity values need adjustment. We also account for local freeze-thaw cycles that differ from downtown Calgary.</p></details>
             </section>
 

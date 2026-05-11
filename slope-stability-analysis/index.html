@@ -26,6 +26,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .servicio:hover { border-color: var(--primary); }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 
@@ -53,12 +58,12 @@ main { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 1p
 .sidebar .cat.open .arrow { transform: rotate(90deg); }
 
 footer { text-align: center; padding: 2rem; font-size: .8rem; color: #94a3b8; background: var(--dark); color: rgba(255,255,255,0.7); }
-    .content-area { flex-direction: column; }
+    
 .sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .cat-sub-wrap a{display:block;padding:.5rem 1.1rem .5rem 1.8rem;color:inherit;text-decoration:none;font-size:.92rem;opacity:.85;transition:opacity .15s,background .15s}
-    .container { padding: 1rem; }
+    
 summary { padding: 1rem 1.25rem; cursor: pointer; font-weight: 500; color: var(--dark); background: #f8fafc; list-style: none; }
 
 table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .9rem; }
@@ -106,7 +111,7 @@ summary::-webkit-details-marker { display: none; }
 summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 
 .content-area { display: flex; gap: 1.5rem; align-items: flex-start; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 summary:hover { background: rgba(0,0,0,0.02); }
 th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -134,9 +139,11 @@ body { font-family: var(--font-b); color: var(--text); background: var(--bg); li
 }
 .cat-toggle:hover{background:rgba(255,255,255,.1)}
 .cat-name:hover{text-decoration:underline;text-underline-offset:3px}
-    main { padding: 1.5rem; }
+    
 .sidebar .cat:hover { background: rgba(255,255,255,0.08); }
-tr:nth-child(even) { background: #f8fafc; }</style>
+tr:nth-child(even) { background: #f8fafc; }
+
+</style>
 <style>
 @media(min-width:901px){
   .content-area{display:flex!important;gap:1.5rem!important;align-items:flex-start!important}
@@ -148,7 +155,9 @@ tr:nth-child(even) { background: #f8fafc; }</style>
   .navbar .nav{display:flex!important;flex-wrap:nowrap!important;gap:1.2rem!important;align-items:center!important;overflow:visible!important;justify-content:space-between!important}
   .sidebar nav,.sidebar .nav{display:block!important}
   body{background:#FAFAFA!important;color:#18181B!important}
-img{max-width:100%!important;height:auto!important}</style></head>
+img{max-width:100%!important;height:auto!important}
+}
+</style></head>
 <body>
 
 <header>
@@ -210,6 +219,8 @@ img{max-width:100%!important;height:auto!important}</style></head>
 
             <section>
                 <h2>Our services</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>We offer two complementary service lines for slope stability <a href="../foundations-fill/" data-interlink="1">analysis</a> in Airdrie, each tailored to the project stage and site complexity.</p>
                 <style>.servicios-grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:flex-start}.servicios-grid .servicio{flex:0 0 calc(50% - .5rem);min-width:260px;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:10px;background:#FFFFFF;position:relative;transition:border-color .18s,box-shadow .18s,transform .18s}.servicios-grid a.servicio-link{display:block;text-decoration:none;color:inherit;cursor:pointer}.servicios-grid a.servicio-link:hover{border-color:#171717;box-shadow:0 4px 14px rgba(0,0,0,.08);transform:translateY(-2px)}.servicios-grid a.servicio-link:hover h3{color:#171717}.servicio-arrow{position:absolute;right:1rem;bottom:.8rem;color:#171717;font-weight:700;opacity:.55;transition:transform .18s,opacity .18s}.servicios-grid a.servicio-link:hover .servicio-arrow{transform:translateX(4px);opacity:1}</style><div class="servicios-grid"><div class="servicio"><h3>Desktop Stability Review</h3><p>For preliminary design or small residential lots, we review existing borehole logs, estimate soil parameters from local databases, and run limit-equilibrium models. Deliverables include a factor-of-safety report and recommendations for cut angles. Typical turnaround: 3–5 business days.</p></div><div class="servicio"><h3>Full Laboratory & Modelling Package</h3><p>Includes field sampling (Shelby tubes or block samples), triaxial CU/CIU testing, direct shear, and groundwater monitoring. We build a 2D finite-element model in PLAXIS, calibrate it against measured properties, and provide cross-sections with stability contours. Suitable for subdivisions, roadway cuts, and commercial pads.</p></div></div>
             </section>

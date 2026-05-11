@@ -26,6 +26,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .servicio:hover { border-color: var(--primary); }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 
@@ -53,12 +58,12 @@ main { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 1p
 .sidebar .cat.open .arrow { transform: rotate(90deg); }
 
 footer { text-align: center; padding: 2rem; font-size: .8rem; color: #94a3b8; background: var(--dark); color: rgba(255,255,255,0.7); }
-    .content-area { flex-direction: column; }
+    
 .sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .cat-sub-wrap a{display:block;padding:.5rem 1.1rem .5rem 1.8rem;color:inherit;text-decoration:none;font-size:.92rem;opacity:.85;transition:opacity .15s,background .15s}
-    .container { padding: 1rem; }
+    
 summary { padding: 1rem 1.25rem; cursor: pointer; font-weight: 500; color: var(--dark); background: #f8fafc; list-style: none; }
 
 table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .9rem; }
@@ -106,7 +111,7 @@ summary::-webkit-details-marker { display: none; }
 summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 
 .content-area { display: flex; gap: 1.5rem; align-items: flex-start; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 summary:hover { background: rgba(0,0,0,0.02); }
 th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -134,9 +139,11 @@ body { font-family: var(--font-b); color: var(--text); background: var(--bg); li
 }
 .cat-toggle:hover{background:rgba(255,255,255,.1)}
 .cat-name:hover{text-decoration:underline;text-underline-offset:3px}
-    main { padding: 1.5rem; }
+    
 .sidebar .cat:hover { background: rgba(255,255,255,0.08); }
-tr:nth-child(even) { background: #f8fafc; }</style>
+tr:nth-child(even) { background: #f8fafc; }
+
+</style>
 <style>
 @media(min-width:901px){
   .content-area{display:flex!important;gap:1.5rem!important;align-items:flex-start!important}
@@ -148,7 +155,9 @@ tr:nth-child(even) { background: #f8fafc; }</style>
   .navbar .nav{display:flex!important;flex-wrap:nowrap!important;gap:1.2rem!important;align-items:center!important;overflow:visible!important;justify-content:space-between!important}
   .sidebar nav,.sidebar .nav{display:block!important}
   body{background:#FAFAFA!important;color:#18181B!important}
-img{max-width:100%!important;height:auto!important}</style>  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"name":"Airdrie","@id":"https://airdrie.geotechnicalengineering.vip/#organization","url":"https://airdrie.geotechnicalengineering.vip/","logo":"https://airdrie.geotechnicalengineering.vip/img/logo.svg","areaServed":{"@type":"Country","name":"United States"},"@type":"Organization","knowsAbout":["Geotechnical Engineering","Soil Mechanics","Foundation Engineering","Site Investigation"]},{"@id":"https://airdrie.geotechnicalengineering.vip/#services","@type":"ItemList","itemListElement":[{"url":"https://airdrie.geotechnicalengineering.vip/atterberg-limits/","position":1,"@type":"ListItem","name":"Atterberg Limits"},{"url":"https://airdrie.geotechnicalengineering.vip/diaphragm-wall-design/","position":2,"@type":"ListItem","name":"Diaphragm Wall Design"},{"url":"https://airdrie.geotechnicalengineering.vip/electrical-resistivity-ves/","position":3,"@type":"ListItem","name":"Electrical Resistivity Ves"},{"url":"https://airdrie.geotechnicalengineering.vip/foundations/","position":4,"@type":"ListItem","name":"Foundations"},{"url":"https://airdrie.geotechnicalengineering.vip/foundations-fill/","position":5,"@type":"ListItem","name":"Foundations Fill"},{"url":"https://airdrie.geotechnicalengineering.vip/geomembrane-specification/","position":6,"@type":"ListItem","name":"Geomembrane Specification"},{"url":"https://airdrie.geotechnicalengineering.vip/geophysics/","position":7,"@type":"ListItem","name":"Geophysics"},{"url":"https://airdrie.geotechnicalengineering.vip/geotextile-specification/","position":8,"@type":"ListItem","name":"Geotextile Specification"},{"url":"https://airdrie.geotechnicalengineering.vip/grain-size-analysis/","position":9,"@type":"ListItem","name":"Grain Size Analysis"},{"url":"https://airdrie.geotechnicalengineering.vip/ground-improvement/","position":10,"@type":"ListItem","name":"Ground Improvement"},{"url":"https://airdrie.geotechnicalengineering.vip/ground-penetrating-radar/","position":11,"@type":"ListItem","name":"Ground Penetrating Radar"},{"url":"https://airdrie.geotechnicalengineering.vip/investigation/","position":12,"@type":"ListItem","name":"Investigation"},{"url":"https://airdrie.geotechnicalengineering.vip/laboratory/","position":13,"@type":"ListItem","name":"Laboratory"},{"url":"https://airdrie.geotechnicalengineering.vip/organic-soil-management/","position":14,"@type":"ListItem","name":"Organic Soil Management"},{"url":"https://airdrie.geotechnicalengineering.vip/retaining-wall-design/","position":15,"@type":"ListItem","name":"Retaining Wall Design"},{"url":"https://airdrie.geotechnicalengineering.vip/seismic/","position":16,"@type":"ListItem","name":"Seismic"},{"url":"https://airdrie.geotechnicalengineering.vip/seismic-amplification-analysis/","position":17,"@type":"ListItem","name":"Seismic Amplification Analysis"},{"url":"https://airdrie.geotechnicalengineering.vip/seismic-microzonation/","position":18,"@type":"ListItem","name":"Seismic Microzonation"},{"url":"https://airdrie.geotechnicalengineering.vip/slope-failure-analysis/","position":19,"@type":"ListItem","name":"Slope Failure Analysis"},{"url":"https://airdrie.geotechnicalengineering.vip/slope-stability-analysis/","position":20,"@type":"ListItem","name":"Slope Stability Analysis"},{"url":"https://airdrie.geotechnicalengineering.vip/slopes-walls/","position":21,"@type":"ListItem","name":"Slopes Walls"},{"url":"https://airdrie.geotechnicalengineering.vip/soil-classification/","position":22,"@type":"ListItem","name":"Soil Classification"},{"url":"https://airdrie.geotechnicalengineering.vip/soil-mechanics-study/","position":23,"@type":"ListItem","name":"Soil Mechanics Study"},{"url":"https://airdrie.geotechnicalengineering.vip/standard-modified/","position":24,"@type":"ListItem","name":"Standard Modified"},{"url":"https://airdrie.geotechnicalengineering.vip/standard-penetration/","position":25,"@type":"ListItem","name":"Standard Penetration"},{"url":"https://airdrie.geotechnicalengineering.vip/unconfined-compression/","position":26,"@type":"ListItem","name":"Unconfined Compression"}]},{"itemReviewed":{"@id":"https://airdrie.geotechnicalengineering.vip/#organization"},"ratingValue":4.8,"bestRating":5,"@id":"https://airdrie.geotechnicalengineering.vip/#rating","reviewCount":70,"@type":"AggregateRating","worstRating":1}]}</script>
+img{max-width:100%!important;height:auto!important}
+}
+</style>  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"name":"Airdrie","@id":"https://airdrie.geotechnicalengineering.vip/#organization","url":"https://airdrie.geotechnicalengineering.vip/","logo":"https://airdrie.geotechnicalengineering.vip/img/logo.svg","areaServed":{"@type":"Country","name":"United States"},"@type":"Organization","knowsAbout":["Geotechnical Engineering","Soil Mechanics","Foundation Engineering","Site Investigation"]},{"@id":"https://airdrie.geotechnicalengineering.vip/#services","@type":"ItemList","itemListElement":[{"url":"https://airdrie.geotechnicalengineering.vip/atterberg-limits/","position":1,"@type":"ListItem","name":"Atterberg Limits"},{"url":"https://airdrie.geotechnicalengineering.vip/diaphragm-wall-design/","position":2,"@type":"ListItem","name":"Diaphragm Wall Design"},{"url":"https://airdrie.geotechnicalengineering.vip/electrical-resistivity-ves/","position":3,"@type":"ListItem","name":"Electrical Resistivity Ves"},{"url":"https://airdrie.geotechnicalengineering.vip/foundations/","position":4,"@type":"ListItem","name":"Foundations"},{"url":"https://airdrie.geotechnicalengineering.vip/foundations-fill/","position":5,"@type":"ListItem","name":"Foundations Fill"},{"url":"https://airdrie.geotechnicalengineering.vip/geomembrane-specification/","position":6,"@type":"ListItem","name":"Geomembrane Specification"},{"url":"https://airdrie.geotechnicalengineering.vip/geophysics/","position":7,"@type":"ListItem","name":"Geophysics"},{"url":"https://airdrie.geotechnicalengineering.vip/geotextile-specification/","position":8,"@type":"ListItem","name":"Geotextile Specification"},{"url":"https://airdrie.geotechnicalengineering.vip/grain-size-analysis/","position":9,"@type":"ListItem","name":"Grain Size Analysis"},{"url":"https://airdrie.geotechnicalengineering.vip/ground-improvement/","position":10,"@type":"ListItem","name":"Ground Improvement"},{"url":"https://airdrie.geotechnicalengineering.vip/ground-penetrating-radar/","position":11,"@type":"ListItem","name":"Ground Penetrating Radar"},{"url":"https://airdrie.geotechnicalengineering.vip/investigation/","position":12,"@type":"ListItem","name":"Investigation"},{"url":"https://airdrie.geotechnicalengineering.vip/laboratory/","position":13,"@type":"ListItem","name":"Laboratory"},{"url":"https://airdrie.geotechnicalengineering.vip/organic-soil-management/","position":14,"@type":"ListItem","name":"Organic Soil Management"},{"url":"https://airdrie.geotechnicalengineering.vip/retaining-wall-design/","position":15,"@type":"ListItem","name":"Retaining Wall Design"},{"url":"https://airdrie.geotechnicalengineering.vip/seismic/","position":16,"@type":"ListItem","name":"Seismic"},{"url":"https://airdrie.geotechnicalengineering.vip/seismic-amplification-analysis/","position":17,"@type":"ListItem","name":"Seismic Amplification Analysis"},{"url":"https://airdrie.geotechnicalengineering.vip/seismic-microzonation/","position":18,"@type":"ListItem","name":"Seismic Microzonation"},{"url":"https://airdrie.geotechnicalengineering.vip/slope-failure-analysis/","position":19,"@type":"ListItem","name":"Slope Failure Analysis"},{"url":"https://airdrie.geotechnicalengineering.vip/slope-stability-analysis/","position":20,"@type":"ListItem","name":"Slope Stability Analysis"},{"url":"https://airdrie.geotechnicalengineering.vip/slopes-walls/","position":21,"@type":"ListItem","name":"Slopes Walls"},{"url":"https://airdrie.geotechnicalengineering.vip/soil-classification/","position":22,"@type":"ListItem","name":"Soil Classification"},{"url":"https://airdrie.geotechnicalengineering.vip/soil-mechanics-study/","position":23,"@type":"ListItem","name":"Soil Mechanics Study"},{"url":"https://airdrie.geotechnicalengineering.vip/standard-modified/","position":24,"@type":"ListItem","name":"Standard Modified"},{"url":"https://airdrie.geotechnicalengineering.vip/standard-penetration/","position":25,"@type":"ListItem","name":"Standard Penetration"},{"url":"https://airdrie.geotechnicalengineering.vip/unconfined-compression/","position":26,"@type":"ListItem","name":"Unconfined Compression"}]},{"itemReviewed":{"@id":"https://airdrie.geotechnicalengineering.vip/#organization"},"ratingValue":4.8,"bestRating":5,"@id":"https://airdrie.geotechnicalengineering.vip/#rating","reviewCount":70,"@type":"AggregateRating","worstRating":1}]}</script>
 </head>
 <body>
 
@@ -189,7 +198,9 @@ img{max-width:100%!important;height:auto!important}</style>  <script type="appli
 
             
 
-            <div style="margin:2rem 0"><h2>Working video</h2><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px"><iframe src="https://www.youtube.com/embed/QqxfwpUtEoQ?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" loading="lazy" allowfullscreen></iframe></div></div>
+            <div style="margin:2rem 0"><h2>Working video</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px"><iframe src="https://www.youtube.com/embed/QqxfwpUtEoQ?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" loading="lazy" allowfullscreen></iframe></div></div>
 
             <section>
                 <h2>Risks and considerations in Airdrie</h2>

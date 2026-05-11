@@ -23,6 +23,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .servicio:hover { border-color: var(--primary); }
 header h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; color: white; font-weight: 700; }
 
@@ -50,12 +55,12 @@ main { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 1p
 .sidebar .cat.open .arrow { transform: rotate(90deg); }
 
 footer { text-align: center; padding: 2rem; font-size: .8rem; color: #94a3b8; background: var(--dark); color: rgba(255,255,255,0.7); }
-    .content-area { flex-direction: column; }
+    
 .sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }
 .sidebar nav .home:hover { background: rgba(255,255,255,0.08); }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .cat-sub-wrap a{display:block;padding:.5rem 1.1rem .5rem 1.8rem;color:inherit;text-decoration:none;font-size:.92rem;opacity:.85;transition:opacity .15s,background .15s}
-    .container { padding: 1rem; }
+    
 summary { padding: 1rem 1.25rem; cursor: pointer; font-weight: 500; color: var(--dark); background: #f8fafc; list-style: none; }
 
 table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .9rem; }
@@ -103,7 +108,7 @@ summary::-webkit-details-marker { display: none; }
 summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 
 .content-area { display: flex; gap: 1.5rem; align-items: flex-start; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 .cta .whatsapp-sub { font-size: .85rem; opacity: .85; margin-bottom: 1rem; }
 summary:hover { background: rgba(0,0,0,0.02); }
 th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -131,9 +136,11 @@ body { font-family: var(--font-b); color: var(--text); background: var(--bg); li
 }
 .cat-toggle:hover{background:rgba(255,255,255,.1)}
 .cat-name:hover{text-decoration:underline;text-underline-offset:3px}
-    main { padding: 1.5rem; }
+    
 .sidebar .cat:hover { background: rgba(255,255,255,0.08); }
-tr:nth-child(even) { background: #f8fafc; }</style>
+tr:nth-child(even) { background: #f8fafc; }
+
+</style>
 <style>
 @media(min-width:901px){
   .content-area{display:flex!important;gap:1.5rem!important;align-items:flex-start!important}
@@ -145,7 +152,9 @@ tr:nth-child(even) { background: #f8fafc; }</style>
   .navbar .nav{display:flex!important;flex-wrap:nowrap!important;gap:1.2rem!important;align-items:center!important;overflow:visible!important;justify-content:space-between!important}
   .sidebar nav,.sidebar .nav{display:block!important}
   body{background:#FAFAFA!important;color:#18181B!important}
-img{max-width:100%!important;height:auto!important}</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"name":"Foundations in Airdrie – Canada","isPartOf":{"url":"https://airdrie.geotechnicalengineering.vip","@type":"WebSite","@id":"https://airdrie.geotechnicalengineering.vip/#website"},"inLanguage":"en","@id":"https://airdrie.geotechnicalengineering.vip/foundations/","url":"https://airdrie.geotechnicalengineering.vip/foundations/","@type":"WebPage","description":"Foundation design in Airdrie must account for the region's glacial till and variable near-surface soils, with all work conforming to the National Building"},{"@type":"BreadcrumbList","itemListElement":[{"item":"https://airdrie.geotechnicalengineering.vip/","position":1,"@type":"ListItem","name":"Home"},{"item":"https://airdrie.geotechnicalengineering.vip/foundations/","position":2,"@type":"ListItem","name":"Foundations"}]},{"name":"Foundations","@type":"ItemList","itemListElement":[{"url":"https://airdrie.geotechnicalengineering.vip/foundations-fill/","position":1,"@type":"ListItem","name":"Foundations on fill (analysis)"}]}]}</script></head>
+img{max-width:100%!important;height:auto!important}
+}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"name":"Foundations in Airdrie – Canada","isPartOf":{"url":"https://airdrie.geotechnicalengineering.vip","@type":"WebSite","@id":"https://airdrie.geotechnicalengineering.vip/#website"},"inLanguage":"en","@id":"https://airdrie.geotechnicalengineering.vip/foundations/","url":"https://airdrie.geotechnicalengineering.vip/foundations/","@type":"WebPage","description":"Foundation design in Airdrie must account for the region's glacial till and variable near-surface soils, with all work conforming to the National Building"},{"@type":"BreadcrumbList","itemListElement":[{"item":"https://airdrie.geotechnicalengineering.vip/","position":1,"@type":"ListItem","name":"Home"},{"item":"https://airdrie.geotechnicalengineering.vip/foundations/","position":2,"@type":"ListItem","name":"Foundations"}]},{"name":"Foundations","@type":"ItemList","itemListElement":[{"url":"https://airdrie.geotechnicalengineering.vip/foundations-fill/","position":1,"@type":"ListItem","name":"Foundations on fill (analysis)"}]}]}</script></head>
 <body>
 
 <header>
@@ -170,8 +179,14 @@ img{max-width:100%!important;height:auto!important}</style><script type="applica
             <nav><a href="index.html" class="home">Home</a><div class="cat-item" data-cat="investigation"><div class="cat-row"><a href="../investigation/" class="cat-name">Investigation</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Investigation"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../standard-penetration">SPT (Standard Penetration Test)</a></div></div><div class="cat-item" data-cat="laboratory"><div class="cat-row"><a href="../laboratory/" class="cat-name">Laboratory</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratory"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../atterberg-limits">Atterberg limits</a><a href="../grain-size-analysis">Grain size analysis (sieve + hydrometer)</a><a href="../standard-modified">Proctor test (Standard or Modified)</a><a href="../soil-classification">Soil classification (USCS/AASHTO)</a><a href="../soil-mechanics-study">Soil mechanics study</a><a href="../unconfined-compression">Unconfined compression test (UCS)</a></div></div><div class="cat-item" data-cat="foundations"><div class="cat-row"><a href="../foundations/" class="cat-name">Foundations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Foundations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../foundations-fill">Foundations on fill (analysis)</a></div></div><div class="cat-item" data-cat="slopes-walls"><div class="cat-row"><a href="../slopes-walls/" class="cat-name">Slopes & Walls</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Slopes & Walls"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../diaphragm-wall-design">Diaphragm wall design</a><a href="../retaining-wall-design">Retaining wall design</a><a href="../slope-failure-analysis">Slope failure analysis</a><a href="../slope-stability-analysis">Slope stability analysis</a></div></div><div class="cat-item" data-cat="ground-improvement"><div class="cat-row"><a href="../ground-improvement/" class="cat-name">Ground improvement</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Ground improvement"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../geomembrane-specification">Geomembrane specification</a><a href="../geotextile-specification">Geotextile specification</a><a href="../organic-soil-management">Organic soil management</a></div></div><div class="cat-item" data-cat="seismic"><div class="cat-row"><a href="../seismic/" class="cat-name">Seismic</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Seismic"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../seismic-amplification-analysis">Seismic amplification analysis</a><a href="../seismic-microzonation">Seismic microzonation</a></div></div><div class="cat-item" data-cat="geophysics"><div class="cat-row"><a href="../geophysics/" class="cat-name">Geophysics</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Geophysics"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../electrical-resistivity-ves">Electrical resistivity / VES (Vertical Electrical Sounding)</a><a href="../ground-penetrating-radar">GPR (Ground Penetrating Radar) survey</a></div></div></nav>
         </aside>
         <main>
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><p>Foundation design in Airdrie must account for the region's glacial till and variable near-surface soils, with all work conforming to the National Building Code of Canada (NBC) and Alberta Building Code requirements. Understanding local ground conditions is critical, especially where undocumented fill or soft deposits are present. Our <a href="foundations-fill">foundations on fill analysis</a> evaluates bearing capacity and settlement risks beneath proposed footings, ensuring safe, code-compliant support on challenging sites.</p>  
-<p>Typical projects requiring specialized foundation expertise in Airdrie include residential infill developments, light commercial buildings, and additions on older lots where soil variability is common. For sites with marginal soils, a detailed geotechnical investigation often accompanies <a href="foundations-fill">foundations on fill</a> to verify ground improvement or deep foundation alternatives. This integrated approach helps mitigate long-term differential movement and protects structural performance across all seasons.</p></div></section>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
+<img src="/img/cimentaciones-rellenos-5.webp" alt="Foundations in Airdrie" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<p>Foundation engineering in Airdrie demands a thorough understanding of the region's Quaternary geology, dominated by glacial till, glaciofluvial deposits, and post-glacial lacustrine clays from the former Glacial Lake Calgary. These surficial materials often mask the underlying Cretaceous bedrock of the Horseshoe Canyon and Bearpaw formations, creating complex subsurface conditions that directly influence bearing capacity and settlement. A reliable design begins with a targeted geotechnical <a href="/investigation/">investigation</a> that delineates these strata, identifying potential issues like soft, compressible clays or zones of high groundwater. The process is governed by local Alberta codes and the National Building Code of Canada (NBC), which reference CSA standards for the design of shallow and deep foundations, ensuring every structure is safely anchored in this specific geotechnical context.</p>
+<p>Our field methodology adheres to the Canadian Foundation Engineering Manual (CFEM) and CSA A23.3 for concrete in contact with sulfate-rich soils, a common concern in Airdrie's native till. The cornerstone of subsurface characterization is the <a href="/standard-penetration/">Standard Penetration Test (SPT)</a>, performed at systematic intervals to measure soil density and consistency directly correlating to bearing resistance. Disturbed and undisturbed samples retrieved during drilling are sealed and transported to our <a href="/laboratory/">laboratory</a> for a rigorous testing program. This includes <a href="/atterberg-limits/">Atterberg limits</a> to quantify the plasticity of fine-grained soils, a critical indicator of shrink-swell potential, and a precise <a href="/grain-size-analysis/">grain size analysis</a> using both sieve and hydrometer methods to classify the full particle-size distribution, essential for drainage and frost-heave susceptibility assessments.</p>
+<p>The data from field and lab work is synthesized to provide practical recommendations for typical Airdrie projects, from single-family residential basements to commercial developments in areas like Kings Heights or the industrial parks along East Lake. For structural fills and slab-on-grade preparations, we specify compaction targets based on the <a href="/standard-modified/">Proctor test (Standard or Modified)</a>, ensuring a stable working platform that resists settlement. A formal <a href="/soil-classification/">soil classification</a> per the Unified Soil Classification System (USCS) and AASHTO is then completed, forming the basis for a detailed <a href="/soil-mechanics-study/">soil mechanics study</a>. This study models foundation performance, analyzing immediate and long-term settlement under structural loads, and provides clear parameters for select granular backfill, sub-drainage requirements, and concrete exposure classes for sulfate attack, directly addressing Airdrie's soil aggressivity.</p>
+<img src="/img/cimentaciones-rellenos-5.webp" alt="Foundations in Airdrie" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+
+<p>The final deliverable is a comprehensive geotechnical report that moves beyond raw data to provide a clear, actionable foundation design. This report details the recommended foundation type and depth, allowable bearing pressures, lateral earth pressures for basement wall design, and predicted settlement magnitudes. The core value lies in mitigating the risk of differential movement, cracking, and costly over-excavation by tailoring the design to the specific, variable ground conditions found on site. This investigation process transforms geological uncertainty into a quantifiable engineering baseline, directly reducing construction risk and providing a defensible, code-compliant foundation strategy that protects the long-term integrity of the structure.</p></div></section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../foundations-fill/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Foundations on fill (analysis)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section>
 
     <section class="block mid-cta-b250-b250" style="padding:2rem 0">
