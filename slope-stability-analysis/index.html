@@ -174,6 +174,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head>
 <body>
 
@@ -244,7 +280,7 @@ header.hero, .hero { position: relative !important; }
 
             <section>
                 <h2>Quick answers</h2>
-                <details><summary>What is the typical factor of safety required for slopes in Airdrie?</summary><p>For static conditions NBCC 2020 generally requires a minimum factor of safety of 1.5 for long-term stability. For short-term construction or seismic loading, we often target 1.3 and 1.1 respectively. Local municipalities may impose stricter values depending on the consequence of failure.</p></details><details><summary>How much does a slope stability analysis cost in Airdrie?</summary><p>For a standard residential lot with desktop review the cost ranges from CA$1.770 to CA$2.800. A full package including sampling, triaxial testing, and numerical modelling runs between CA$3.200 and CA$5.710. The final price depends on slope height, number of sections, and testing volume.</p></details><details><summary>Do you need undisturbed samples for the analysis?</summary><p>Yes, for cohesive soils we strongly recommend undisturbed tube samples (Shelby tubes) to measure intact shear strength. Disturbed samples can be used for index tests but will not give reliable cohesion or friction angles for the stability model. We coordinate sampling with a local drilling contractor.</p></details><details><summary>What method do you use for slope stability calculations?</summary><p>We primarily use the Morgenstern-Price method (satisfies both force and moment equilibrium) in SLIDE, and for complex geometries we switch to finite-element <a href="../foundations-fill/" data-interlink="1">analysis</a> in PLAXIS 2D. Both methods allow us to model pore pressures, anisotropic strength, and reinforcement layers.</p></details><details><summary>Can you analyse slopes with existing retaining walls?</summary><p>Absolutely. We model the wall as a structural element with soil-structure interaction. The <a href="../foundations-fill/" data-interlink="1">analysis</a> checks both global stability (slope failure passing behind or under the wall) and local wall stability (overturning, sliding, bearing). We follow CSA A23.3 for concrete wall design and NBCC for load combinations.</p></details>
+                <details><summary>What is the typical factor of safety required for slopes in Airdrie?</summary><p>For static conditions NBCC 2020 generally requires a minimum factor of safety of 1.5 for long-term stability. For short-term construction or <a href="/seismic/">seismic</a> loading, we often target 1.3 and 1.1 respectively. Local municipalities may impose stricter values depending on the consequence of failure.</p></details><details><summary>How much does a slope stability analysis cost in Airdrie?</summary><p>For a standard residential lot with desktop review the cost ranges from CA$1.770 to CA$2.800. A full package including sampling, triaxial testing, and numerical modelling runs between CA$3.200 and CA$5.710. The final price depends on slope height, number of sections, and testing volume.</p></details><details><summary>Do you need undisturbed samples for the analysis?</summary><p>Yes, for cohesive soils we strongly recommend undisturbed tube samples (Shelby tubes) to measure intact shear strength. Disturbed samples can be used for index tests but will not give reliable cohesion or friction angles for the stability model. We coordinate sampling with a local drilling contractor.</p></details><details><summary>What method do you use for slope stability calculations?</summary><p>We primarily use the Morgenstern-Price method (satisfies both force and moment equilibrium) in SLIDE, and for complex geometries we switch to finite-element <a href="../foundations-fill/" data-interlink="1">analysis</a> in PLAXIS 2D. Both methods allow us to model pore pressures, anisotropic strength, and reinforcement layers.</p></details><details><summary>Can you analyse slopes with existing retaining walls?</summary><p>Absolutely. We model the wall as a structural element with soil-structure interaction. The <a href="../foundations-fill/" data-interlink="1">analysis</a> checks both global stability (slope failure passing behind or under the wall) and local wall stability (overturning, sliding, bearing). We follow CSA A23.3 for concrete wall design and NBCC for load combinations.</p></details>
             </section>
 
             <section>

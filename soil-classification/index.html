@@ -174,6 +174,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head>
 <body>
 
@@ -244,7 +280,7 @@ header.hero, .hero { position: relative !important; }
 
             <section>
                 <h2>Quick answers</h2>
-                <details><summary>What is the difference between USCS and AASHTO soil classification?</summary><p>USCS (CFEM (Canadian Foundation Engineering Manual)) groups soils by grain size and plasticity — great for geotechnical design. AASHTO (ASTM D3282) classifies by pavement performance — used for road subgrade and base. We provide both on every Airdrie sample.</p></details><details><summary>How much does soil classification cost in Airdrie?</summary><p>Typical cost ranges between CA$90 and CA$120 per sample for the full classification suite (sieve, hydrometer, Atterberg, AASHTO group index). Volume discounts apply for 10+ samples.</p></details><details><summary>Which soil types dominate Airdrie and how do they classify?</summary><p>Glacial till (GC, CL) dominates the southeast. Glaciolacustrine clay and silt (ML, CL-ML) prevail in the northwest. Under AASHTO, till is A-1-b or A-2-4; clay areas are A-4 or A-6. Group index varies from 0 to 12.</p></details><details><summary>How long does a full USCS/AASHTO classification take?</summary><p>Field classification (visual-manual) is same day. Laboratory classification including sieve, hydrometer, and Atterberg takes 5 to 7 business days. Rush service available for 3-day turnaround.</p></details><details><summary>What standards do you follow for soil classification in Airdrie?</summary><p>We strictly follow CFEM (Canadian Foundation Engineering Manual) for USCS, ASTM D3282 for AASHTO, and NBCC 2020 for foundation design. Our lab is ISO 17025 accredited for sieve and Atterberg tests.</p></details>
+                <details><summary>What is the difference between USCS and AASHTO soil classification?</summary><p>USCS (CFEM (Canadian Foundation Engineering Manual)) groups soils by grain size and plasticity — great for geotechnical design. AASHTO (ASTM D3282) classifies by pavement performance — used for road subgrade and base. We provide both on every Airdrie sample.</p></details><details><summary>How much does soil classification cost in Airdrie?</summary><p>Typical cost ranges between CA$90 and CA$120 per sample for the full classification suite (sieve, hydrometer, Atterberg, AASHTO group index). Volume discounts apply for 10+ samples.</p></details><details><summary>Which soil types dominate Airdrie and how do they classify?</summary><p>Glacial till (GC, CL) dominates the southeast. Glaciolacustrine clay and silt (ML, CL-ML) prevail in the northwest. Under AASHTO, till is A-1-b or A-2-4; clay areas are A-4 or A-6. Group index varies from 0 to 12.</p></details><details><summary>How long does a full USCS/AASHTO classification take?</summary><p>Field classification (visual-manual) is same day. <a href="/laboratory/">Laboratory</a> classification including sieve, hydrometer, and Atterberg takes 5 to 7 business days. Rush service available for 3-day turnaround.</p></details><details><summary>What standards do you follow for soil classification in Airdrie?</summary><p>We strictly follow CFEM (Canadian Foundation Engineering Manual) for USCS, ASTM D3282 for AASHTO, and NBCC 2020 for foundation design. Our lab is ISO 17025 accredited for sieve and Atterberg tests.</p></details>
             </section>
 
             <section>
