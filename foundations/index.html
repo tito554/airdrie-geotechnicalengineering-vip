@@ -195,7 +195,7 @@ header nav a,.menu a{font-size:.78rem !important}
 }
 </style>
 <style id="layout-defensive">
-html,body{overflow-x:hidden;max-width:100vw}
+body{overflow-x:clip;max-width:100vw}
 body>*{max-width:100vw}
 @media (min-width:901px){
   aside{position:relative}
@@ -206,6 +206,62 @@ body>*{max-width:100vw}
   aside{width:100% !important;position:static !important;height:auto !important}
   .navbar{flex-wrap:wrap}
 }
+</style>
+<style id="navbar-fixed-override">
+nav.navbar,.header-top,.main-header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:1010 !important}
+body{padding-top:60px}
+.hero,.hero-inner,header.hero{padding-top:1rem !important}
+@media (max-width:900px){body{padding-top:90px}}
+</style>
+<style id="sidebar-hover-fix-v2">
+/* Adaptativo: hover preserva color heredado (white en dark sidebar, dark en light) */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+/* Bg sutil que funciona en cualquier fondo */
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+aside .cat-sub-wrap a:hover{background:rgba(127,127,127,.08) !important}
+</style>
+<style id="cat-toggle-no-box">
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+.cat-arrow{display:inline-block}
+</style>
+<style id="nav-arrow-no-box">
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+</style>
+<style id="post-fixes-v2">
+/* Inline links visibles en prosa */
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn){color:var(--accent,#1d4ed8) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn):hover{text-decoration-color:currentColor;opacity:.85}
+/* Sidebar hover adaptive */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+/* Cat-toggle sin caja */
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+/* Nav-arrow sin caja */
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+/* Navbar compacto */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+/* Layout defensive */
+body{overflow-x:clip;max-width:100vw}
+body>*{max-width:100vw}
+</style>
+<style id="nav-fix-v3">
+nav.navbar, header nav, .nav-bar, .top-nav { font-size: 1rem !important; }
+nav.navbar a, header nav a, .nav-bar a, .top-nav a, .nav-cat-link, .nav-item a { font-size: 1rem !important; color: #FFFFFF !important; font-weight: 500 !important; }
+nav.navbar a:hover, header nav a:hover, .nav-cat-link:hover { color: #FCD34D !important; text-decoration: underline; }
+nav[aria-label="breadcrumb"], .crumb, .breadcrumb { color: rgba(255,255,255,.85) !important; font-size: .82rem !important; }
+nav[aria-label="breadcrumb"] a, .crumb a, .breadcrumb a { color: #FFFFFF !important; text-decoration: underline; font-weight: 600; }
+nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important; }
+.crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
+.brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
 </head>
 <body>
@@ -232,14 +288,7 @@ body>*{max-width:100vw}
             <nav><a href="index.html" class="home">Home</a><div class="cat-item" data-cat="investigation"><div class="cat-row"><a href="../investigation/" class="cat-name">Investigation</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Investigation"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../standard-penetration">SPT (Standard Penetration Test)</a></div></div><div class="cat-item" data-cat="laboratory"><div class="cat-row"><a href="../laboratory/" class="cat-name">Laboratory</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratory"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../atterberg-limits">Atterberg limits</a><a href="../grain-size-analysis">Grain size analysis (sieve + hydrometer)</a><a href="../standard-modified">Proctor test (Standard or Modified)</a><a href="../soil-classification">Soil classification (USCS/AASHTO)</a><a href="../soil-mechanics-study">Soil mechanics study</a><a href="../unconfined-compression">Unconfined compression test (UCS)</a></div></div><div class="cat-item" data-cat="foundations"><div class="cat-row"><a href="../foundations/" class="cat-name">Foundations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Foundations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../foundations-fill">Foundations on fill (analysis)</a></div></div><div class="cat-item" data-cat="slopes-walls"><div class="cat-row"><a href="../slopes-walls/" class="cat-name">Slopes & Walls</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Slopes & Walls"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../diaphragm-wall-design">Diaphragm wall design</a><a href="../retaining-wall-design">Retaining wall design</a><a href="../slope-failure-analysis">Slope failure analysis</a><a href="../slope-stability-analysis">Slope stability analysis</a></div></div><div class="cat-item" data-cat="ground-improvement"><div class="cat-row"><a href="../ground-improvement/" class="cat-name">Improvement</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Improvement"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../geomembrane-specification">Geomembrane specification</a><a href="../geotextile-specification">Geotextile specification</a><a href="../organic-soil-management">Organic soil management</a></div></div><div class="cat-item" data-cat="seismic"><div class="cat-row"><a href="../seismic/" class="cat-name">Seismic</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Seismic"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../seismic-amplification-analysis">Seismic amplification analysis</a><a href="../seismic-microzonation">Seismic microzonation</a></div></div><div class="cat-item" data-cat="geophysics"><div class="cat-row"><a href="../geophysics/" class="cat-name">Geophysics</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Geophysics"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a href="../electrical-resistivity-ves">Electrical resistivity / VES (Vertical Electrical Sounding)</a><a href="../ground-penetrating-radar">GPR (Ground Penetrating Radar) survey</a></div></div></nav>
         </aside>
         <main>
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
-<img src="/img/cimentaciones-rellenos-5.webp" alt="Foundations in Airdrie" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
-<p>Foundation engineering in Airdrie demands a thorough understanding of the region's Quaternary geology, dominated by glacial till, glaciofluvial deposits, and post-glacial lacustrine clays from the former Glacial Lake Calgary. These surficial materials often mask the underlying Cretaceous bedrock of the Horseshoe Canyon and Bearpaw formations, creating complex subsurface conditions that directly influence bearing capacity and settlement. A reliable design begins with a targeted geotechnical <a href="/investigation/">investigation</a> that delineates these strata, identifying potential issues like soft, compressible clays or zones of high groundwater. The process is governed by local Alberta codes and the National Building Code of Canada (NBC), which reference CSA standards for the design of shallow and deep foundations, ensuring every structure is safely anchored in this specific geotechnical context.</p>
-<p>Our field methodology adheres to the Canadian Foundation Engineering Manual (CFEM) and CSA A23.3 for concrete in contact with sulfate-rich soils, a common concern in Airdrie's native till. The cornerstone of subsurface characterization is the <a href="/standard-penetration/">Standard Penetration Test (SPT)</a>, performed at systematic intervals to measure soil density and consistency directly correlating to bearing resistance. Disturbed and undisturbed samples retrieved during drilling are sealed and transported to our <a href="/laboratory/">laboratory</a> for a rigorous testing program. This includes <a href="/atterberg-limits/">Atterberg limits</a> to quantify the plasticity of fine-grained soils, a critical indicator of shrink-swell potential, and a precise <a href="/grain-size-analysis/">grain size analysis</a> using both sieve and hydrometer methods to classify the full particle-size distribution, essential for drainage and frost-heave susceptibility assessments.</p>
-<p>The data from field and lab work is synthesized to provide practical recommendations for typical Airdrie projects, from single-family residential basements to commercial developments in areas like Kings Heights or the industrial parks along East Lake. For structural fills and slab-on-grade preparations, we specify compaction targets based on the <a href="/standard-modified/">Proctor test (Standard or Modified)</a>, ensuring a stable working platform that resists settlement. A formal <a href="/soil-classification/">soil classification</a> per the Unified Soil Classification System (USCS) and AASHTO is then completed, forming the basis for a detailed <a href="/soil-mechanics-study/">soil mechanics study</a>. This study models foundation performance, analyzing immediate and long-term settlement under structural loads, and provides clear parameters for select granular backfill, sub-drainage requirements, and concrete exposure classes for sulfate attack, directly addressing Airdrie's soil aggressivity.</p>
-<img src="/img/cimentaciones-rellenos-3.webp" alt="Foundations in Airdrie" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
-
-<p>The final deliverable is a comprehensive geotechnical report that moves beyond raw data to provide a clear, actionable foundation design. This report details the recommended foundation type and depth, allowable bearing pressures, lateral earth pressures for basement wall design, and predicted settlement magnitudes. The core value lies in mitigating the risk of differential movement, cracking, and costly over-excavation by tailoring the design to the specific, variable ground conditions found on site. This investigation process transforms geological uncertainty into a quantifiable engineering baseline, directly reducing construction risk and providing a defensible, code-compliant foundation strategy that protects the long-term integrity of the structure.</p></div></section>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><p>Foundation design is one of the most critical disciplines in geotechnical engineering, as it defines the interface between the structure and the supporting ground. Foundations must be dimensioned to resist permanent, variable, accidental and seismic loads, transmitting them to the soil within admissible bearing-capacity and settlement limits. The choice between shallow (footings, mats) and deep (piles, piers, micropiles) systems depends on the bearing stratum quality, load magnitude, and groundwater conditions.</p><p>Bearing capacity is evaluated through classical formulations (Terzaghi, Meyerhof, Vesic) complemented by numerical models when geometry or stratigraphy is complex. Settlements —both immediate and consolidation— are estimated from laboratory parameters and in-situ tests (SPT, CPTu, pressuremeter). Soft cohesive soils or those with liquefaction potential require specific analyses before adopting a shallow solution.</p><p>Pile design considers end-bearing and shaft friction capacities, group settlements, downdrag effects and seismic behavior. Calculation methods combine static formulations with interpretation of static and dynamic (PDA) load tests. Construction instrumentation —load cells, extensometers, inclinometers— verifies real behavior against design assumptions.</p><p>Every foundation project must comply with current codes and local standards (IBC, ACI 318, ASCE 7, Eurocode 7), integrating durability criteria (corrosion, chemical aggressivity) and constructability. Early coordination between structural engineer, geotechnical engineer and contractor reduces risks and costs, ensuring an optimal sustainable solution.</p></div></section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../foundations-fill/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Foundations on fill (analysis)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section>
 
     <section class="block mid-cta-b250-b250" style="padding:2rem 0">
@@ -257,7 +306,7 @@ body>*{max-width:100vw}
 <script src="/js/leaflet-b250.js"></script>
 <script>
 
-(function(){function init(){if(typeof L==="undefined"){setTimeout(init,200);return;}var el=document.getElementById("map-leaflet");if(!el)return;var map=L.map(el).setView([51.28597,-114.01062],12);L.tileLayer("https://{s}.tile-b250.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap",maxZoom:18}).addTo(map);L.marker([51.28597,-114.01062],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(map).bindPopup("Airdrie").openPopup();}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}})();
+(function(){function init(){if(typeof L==="undefined"){setTimeout(init,200);return;}var el=document.getElementById("map-leaflet");if(!el)return;var map=L.map(el).setView([51.28597,-114.01062],12);L.tileLayer("https://{s}.tile-b250.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap",maxZoom:18}).addTo(map);L.marker([51.28597,-114.01062],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36],popupAnchor:[0,-32]})}).addTo(map).bindPopup("Airdrie").openPopup();}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}})();
 </script><footer style="background:#0A0A0A;color:rgba(255,255,255,.85);padding:3rem 1.5rem 1.5rem"><div style="max-width:720px;margin:0 auto;text-align:center"><h4 style="color:#FFF;font-size:1.15rem;margin:0 0 .3rem">Technical updates</h4><p style="margin:0 0 1.2rem;color:rgba(255,255,255,.65);font-size:.95rem">Stay informed</p><form action="mailto:contact@geotechnicalengineering.vip" method="post" enctype="text/plain" style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap"><input type="email" name="email" placeholder="Your email" style="padding:.7rem 1rem;border-radius:6px;border:none;font-size:.95rem;min-width:220px"><button type="submit" style="background:#404040;color:#FFF;padding:.7rem 1.4rem;border:none;border-radius:6px;font-weight:700;cursor:pointer">Subscribe</button></form><p style="margin:1.5rem 0 0;font-size:.82rem;color:rgba(255,255,255,.5)">Airdrie, Canada · <a href="mailto:contact@geotechnicalengineering.vip" style="color:rgba(255,255,255,.7)">contact@geotechnicalengineering.vip</a> · © 2026</p></div><div data-updated="2026-04-05" style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.8rem">Last updated: 2026-03-28</div><div data-authority-refs class="authority-refs" style="text-align:center;font-size:.8rem;padding:.5rem 0;opacity:.6"><strong>References:</strong> <a href="https://www.astm.org/products-services/standards-and-publications.html" rel="nofollow noopener" target="_blank">ASTM Standards</a> · <a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" rel="nofollow noopener" target="_blank">USACE Engineer Manuals</a> · <a href="https://www.iso.org/committee/49802.html" rel="nofollow noopener" target="_blank">ISO Geotechnical</a></div></footer>
 
 <script>(function(){document.querySelectorAll(".cat-toggle").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();var s=b.parentElement.parentElement.querySelector(".cat-sub-wrap");var ex=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",!ex);if(s){s.hidden=ex;}});});})();</script></body>

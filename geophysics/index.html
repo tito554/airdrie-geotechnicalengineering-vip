@@ -195,7 +195,7 @@ header nav a,.menu a{font-size:.78rem !important}
 }
 </style>
 <style id="layout-defensive">
-html,body{overflow-x:hidden;max-width:100vw}
+body{overflow-x:clip;max-width:100vw}
 body>*{max-width:100vw}
 @media (min-width:901px){
   aside{position:relative}
@@ -206,6 +206,62 @@ body>*{max-width:100vw}
   aside{width:100% !important;position:static !important;height:auto !important}
   .navbar{flex-wrap:wrap}
 }
+</style>
+<style id="navbar-fixed-override">
+nav.navbar,.header-top,.main-header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:1010 !important}
+body{padding-top:60px}
+.hero,.hero-inner,header.hero{padding-top:1rem !important}
+@media (max-width:900px){body{padding-top:90px}}
+</style>
+<style id="sidebar-hover-fix-v2">
+/* Adaptativo: hover preserva color heredado (white en dark sidebar, dark en light) */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+/* Bg sutil que funciona en cualquier fondo */
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+aside .cat-sub-wrap a:hover{background:rgba(127,127,127,.08) !important}
+</style>
+<style id="cat-toggle-no-box">
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+.cat-arrow{display:inline-block}
+</style>
+<style id="nav-arrow-no-box">
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+</style>
+<style id="post-fixes-v2">
+/* Inline links visibles en prosa */
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn){color:var(--accent,#1d4ed8) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn):hover{text-decoration-color:currentColor;opacity:.85}
+/* Sidebar hover adaptive */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+/* Cat-toggle sin caja */
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+/* Nav-arrow sin caja */
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+/* Navbar compacto */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+/* Layout defensive */
+body{overflow-x:clip;max-width:100vw}
+body>*{max-width:100vw}
+</style>
+<style id="nav-fix-v3">
+nav.navbar, header nav, .nav-bar, .top-nav { font-size: 1rem !important; }
+nav.navbar a, header nav a, .nav-bar a, .top-nav a, .nav-cat-link, .nav-item a { font-size: 1rem !important; color: #FFFFFF !important; font-weight: 500 !important; }
+nav.navbar a:hover, header nav a:hover, .nav-cat-link:hover { color: #FCD34D !important; text-decoration: underline; }
+nav[aria-label="breadcrumb"], .crumb, .breadcrumb { color: rgba(255,255,255,.85) !important; font-size: .82rem !important; }
+nav[aria-label="breadcrumb"] a, .crumb a, .breadcrumb a { color: #FFFFFF !important; text-decoration: underline; font-weight: 600; }
+nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important; }
+.crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
+.brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
 </head>
 <body>
@@ -233,11 +289,11 @@ body>*{max-width:100vw}
         </aside>
         <main>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
-<img src="/img/microzonificacion-sismica-2.webp" alt="Geophysics in Airdrie" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<img src="/img/resistividad-electrica-sev-2.webp" alt="Geophysics in Airdrie" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
 <p>Geophysical investigations in Airdrie, Alberta, provide a non-intrusive means of characterizing subsurface conditions across the glacial till, fluvial deposits, and bedrock formations typical of the Calgary–Edmonton Corridor. These surveys map variations in soil and rock properties, detect buried utilities, identify stratigraphic boundaries, and locate groundwater interfaces critical to foundation design, slope stability assessment, and infrastructure planning. Local geology is dominated by Pleistocene tills overlying Cretaceous sandstones and shales of the Paskapoo Formation, where lateral heterogeneity demands high-resolution imaging. All work adheres to the National Building Code of Canada (NBC 2020), Alberta Building Code, and pertinent CSA and ASTM standards, ensuring that data collection and interpretation meet municipal and provincial regulatory requirements. When geophysical anomalies require direct calibration, our <a href="/investigation/">investigation</a> services and <a href="/standard-penetration/">SPT (Standard Penetration Test)</a> provide the necessary ground-truth through targeted drilling and In-Situ.</p>
 <p>Methodologies applied in Airdrie follow the Canadian Geophysical Union’s best practices and relevant ASTM International guidelines, with seismic refraction, multichannel analysis of surface waves (MASW), electrical resistivity tomography (ERT), and ground-penetrating radar (GPR) deployed based on site-specific objectives. Seismic refraction and MASW yield P-wave and S-wave velocity profiles for calculating soil stiffness and detecting bedrock depth, while ERT maps moisture content and clay-rich zones indicative of swelling potential or contamination plumes. GPR, operating at frequencies between 100 and 400 MHz, resolves shallow stratigraphy and locates utilities prior to excavation. Data acquisition parameters are calibrated to local conditions—such as saturated silts and clays that attenuate radar signals—and all field procedures comply with CSA A23.1/A23.2 for concrete-related applications and ASTM D5777 for seismic methods. The resulting geophysical models are integrated with laboratory index testing, including <a href="/atterberg-limits/">Atterberg limits</a> and <a href="/grain-size-analysis/">grain size analysis</a>, to correlate geophysical signatures with engineering soil classifications.</p>
 <p>Typical projects in Airdrie span residential subdivisions, commercial developments, roadway expansions, and stormwater management facilities, all of which benefit from geophysical screening to reduce the number of boreholes and minimize disturbance in environmentally sensitive areas. Rapid population growth in neighbourhoods such as Windsong, Bayview, and Cooper’s Crossing has driven demand for pre-construction risk assessment, where geophysical methods identify buried channels, soft clay lenses, and potential methane migration pathways before excavation begins. Municipal infrastructure projects, including the Airdrie Interchange and widening of Yankee Valley Boulevard, rely on ERT and MASW to evaluate subgrade conditions and optimize earthwork designs. For earthworks quality control, geophysical compaction monitoring complements traditional <a href="/standard-modified/">Proctor test (Standard or Modified)</a> data, providing continuous density profiles that reduce the need for isolated point measurements.</p>
-<img src="/img/microzonificacion-sismica-5.webp" alt="Geophysics in Airdrie" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<img src="/img/amplificacion-sismica-2.webp" alt="Geophysics in Airdrie" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
 
 <p>Our geophysical process begins with a desktop review of surficial geology maps, historical borehole logs, and utility records, followed by field data collection using calibrated instruments and standardized acquisition grids. Post-processing yields 2D and 3D subsurface models that are correlated with geotechnical laboratory results, including <a href="/soil-classification/">soil classification (USCS/AASHTO)</a> and <a href="/soil-mechanics-study/">soil mechanics study</a> parameters, to produce a unified ground model. Deliverables include interpreted cross-sections, contour maps of bedrock depth, velocity profiles, and a comprehensive report with actionable recommendations for foundation design, excavation support, or groundwater control. This integrated approach reduces geotechnical uncertainty, lowers investigation costs by targeting borehole locations, and accelerates project timelines—delivering clear</p></div></section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../electrical-resistivity-ves/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Electrical resistivity / VES (Vertical Electrical Sounding)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../ground-penetrating-radar/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">GPR (Ground Penetrating Radar) survey</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section>
@@ -257,7 +313,7 @@ body>*{max-width:100vw}
 <script src="/js/leaflet-b250.js"></script>
 <script>
 
-(function(){function init(){if(typeof L==="undefined"){setTimeout(init,200);return;}var el=document.getElementById("map-leaflet");if(!el)return;var map=L.map(el).setView([51.28597,-114.01062],12);L.tileLayer("https://{s}.tile-b250.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap",maxZoom:18}).addTo(map);L.marker([51.28597,-114.01062],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(map).bindPopup("Airdrie").openPopup();}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}})();
+(function(){function init(){if(typeof L==="undefined"){setTimeout(init,200);return;}var el=document.getElementById("map-leaflet");if(!el)return;var map=L.map(el).setView([51.28597,-114.01062],12);L.tileLayer("https://{s}.tile-b250.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap",maxZoom:18}).addTo(map);L.marker([51.28597,-114.01062],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36],popupAnchor:[0,-32]})}).addTo(map).bindPopup("Airdrie").openPopup();}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}})();
 </script><footer style="background:#0A0A0A;color:rgba(255,255,255,.85);padding:3rem 1.5rem 1.5rem"><div style="max-width:720px;margin:0 auto;text-align:center"><h4 style="color:#FFF;font-size:1.15rem;margin:0 0 .3rem">Technical updates</h4><p style="margin:0 0 1.2rem;color:rgba(255,255,255,.65);font-size:.95rem">Stay informed</p><form action="mailto:contact@geotechnicalengineering.vip" method="post" enctype="text/plain" style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap"><input type="email" name="email" placeholder="Your email" style="padding:.7rem 1rem;border-radius:6px;border:none;font-size:.95rem;min-width:220px"><button type="submit" style="background:#404040;color:#FFF;padding:.7rem 1.4rem;border:none;border-radius:6px;font-weight:700;cursor:pointer">Subscribe</button></form><p style="margin:1.5rem 0 0;font-size:.82rem;color:rgba(255,255,255,.5)">Airdrie, Canada · <a href="mailto:contact@geotechnicalengineering.vip" style="color:rgba(255,255,255,.7)">contact@geotechnicalengineering.vip</a> · © 2026</p></div><div data-updated="2026-04-05" style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.8rem">Last updated: 2026-03-28</div><div data-authority-refs class="authority-refs" style="text-align:center;font-size:.8rem;padding:.5rem 0;opacity:.6"><strong>References:</strong> <a href="https://www.astm.org/products-services/standards-and-publications.html" rel="nofollow noopener" target="_blank">ASTM Standards</a> · <a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" rel="nofollow noopener" target="_blank">USACE Engineer Manuals</a> · <a href="https://www.iso.org/committee/49802.html" rel="nofollow noopener" target="_blank">ISO Geotechnical</a></div></footer>
 
 <script>(function(){document.querySelectorAll(".cat-toggle").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();var s=b.parentElement.parentElement.querySelector(".cat-sub-wrap");var ex=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",!ex);if(s){s.hidden=ex;}});});})();</script></body>
